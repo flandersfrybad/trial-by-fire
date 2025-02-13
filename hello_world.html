@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		h1 {
+		color: red;
+		}
+		.button-with-top-spacing {
+			margin-top: 24px;
+		}
+		body{
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="top-heading">hello world</h1>
+
+	<p>this is my first paragraph</p>
+
+	<section>
+		<form onsubmit="useName(event)">
+			<label for="username-field">username</label>
+			<input id="username-field" type="text" name="username" />
+			<input type="submit" />
+		</form>
+		<button class="button-with-top-spacing" onclick="appendnumbertonumberlist()">Write Random Number</button>
+	</section>
+	<section>
+		<h2>Number List Section</h2>
+		<ul id="numbered-list">
+			<li>1</li>
+		<ul>
+	</section>
+<script>
+	function useName(event){
+		event.preventDefault();		
+		const inputusername = document.getElementById('username-field');
+		const username = inputusername.value;
+		const topheading = document.getElementById('top-heading');
+		topheading.innerText = `hello ${username}`;
+		console.log({username});
+	}
+	function appendnumbertonumberlist(){
+		const list = document.getElementById('numbered-list');
+		const newbullet = document.createElement('li')
+		const randomnumber = Math.round(Math.random()*10);
+		newbullet.innerText = randomnumber;
+		list.append(newbullet);
+	}
+</script>
+
+</body>
+</html>
