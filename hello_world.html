@@ -1,17 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style>
-		h1 {
-		color: red;
-		}
-		.button-with-top-spacing {
-			margin-top: 24px;
-		}
-		body{
-			background-color: lightblue;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
 </head>
 <body>
 	<h1 id="top-heading">hello world</h1>
@@ -24,31 +15,14 @@
 			<input id="username-field" type="text" name="username" />
 			<input type="submit" />
 		</form>
-		<button class="button-with-top-spacing" onclick="appendnumbertonumberlist()">Write Random Number</button>
+		<button type="button" class="button-with-top-spacing" onclick="appendnumbertonumberlist()">Write Random Number</button>
 	</section>
 	<section>
 		<h2>Number List Section</h2>
 		<ul id="numbered-list">
 			<li>1</li>
-		<ul>
+		</ul>
 	</section>
-<script>
-	function useName(event){
-		event.preventDefault();		
-		const inputusername = document.getElementById('username-field');
-		const username = inputusername.value;
-		const topheading = document.getElementById('top-heading');
-		topheading.innerText = `hello ${username}`;
-		console.log({username});
-	}
-	function appendnumbertonumberlist(){
-		const list = document.getElementById('numbered-list');
-		const newbullet = document.createElement('li')
-		const randomnumber = Math.round(Math.random()*10);
-		newbullet.innerText = randomnumber;
-		list.append(newbullet);
-	}
-</script>
-
+	<script src="script.js"></script>
 </body>
 </html>
