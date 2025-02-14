@@ -1,0 +1,11 @@
+h1 {
+    color: red;
+}
+
+.button-with-top-spacing {
+    margin-top: 24px;
+}
+
+body {
+    background-color: lightblue;
+}
